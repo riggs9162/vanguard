@@ -16,7 +16,7 @@ function vanguard.sounds:Register(name, path, pitch, volume, level)
 
     sound.Add({
         name = name,
-        channel = CHAN_STATIC,
+        channel = CHAN_AUTO,
         volume = data.volume,
         level = data.level,
         pitch = data.pitch,
