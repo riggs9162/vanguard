@@ -30,7 +30,7 @@ end
 function vanguard.util:Message(...)
     local args = { ... }
 
-    MsgC(vanguard.info.color, "[VANGUARD] ", Color(255, 255, 255), unpack(args))
+    MsgC(vanguard.info.color, "[VANGUARD] ", color_white, unpack(args))
     Msg("\n")
 end
 
