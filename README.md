@@ -33,7 +33,7 @@ The **Vanguard** library is used by the following modules officially created by 
 
 ---
 
-## Submodules
+## Official Submodules
 
 ### Vanguard Weapons (VWEP)
 
@@ -90,7 +90,3 @@ We welcome contributions to Vanguard! If you have a bug fix, feature request, or
 ## License
 
 Vanguard is open-source software, distributed under the **MIT License**. You are free to use, modify, and distribute it, as long as the original copyright notice and license are included.
-
----
-
-Feel free to modify and expand upon this as per your specific needs!
