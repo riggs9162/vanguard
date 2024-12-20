@@ -4,8 +4,8 @@
 
 The **Vanguard** library is used by the following modules officially created by the Vanguard team:
 
-- **Vanguard Weapons (VWEP)** – A comprehensive weapon base for managing and customizing weapons.
-- **Vanguard Anti Cheat (VAC)** – A private anti-cheat system to prevent cheating and exploits on your server.
+- **[Vanguard Weapons (VWEP)](https://github.com/Minerva-Servers/vanguard-weapons)** – A comprehensive weapon base for managing and customizing weapons.
+- **[Vanguard Anti Cheat (VAC)](https://github.com/Minerva-Servers/vanguard-anticheat)** – A private anti-cheat system to prevent cheating and exploits on your server.
 - **Vanguard Administration Manager (VAM)** – An admin mod to manage server operations, permissions, and player interactions.
 
 ---
@@ -35,7 +35,7 @@ The **Vanguard** library is used by the following modules officially created by 
 
 ## Official Submodules
 
-### Vanguard Weapons (VWEP)
+### [Vanguard Weapons (VWEP)](https://github.com/Minerva-Servers/vanguard-weapons)
 
 **Vanguard Weapons (VWEP)** provides a powerful and flexible weapon base for Garry's Mod. Whether you are building custom weapons or need a solid base to manage your existing weaponry, VWEP offers everything you need.
 
@@ -47,7 +47,7 @@ The **Vanguard** library is used by the following modules officially created by 
 
 ---
 
-### Vanguard Anti Cheat (VAC)
+### [Vanguard Anti Cheat (VAC)](https://github.com/Minerva-Servers/vanguard-anticheat)
 
 **Vanguard Anti Cheat (VAC)** is a private anti-cheat system designed to protect your server from common exploits and cheating methods. Built to be robust and lightweight, VAC provides an effective layer of defense against cheaters.
 
