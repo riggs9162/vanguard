@@ -53,6 +53,10 @@ function vanguard.modules:Register(info)
         end)
     end
 
+    if ( SERVER ) then
+        vanguard.util:Message(info.Name .. " module has been registered.")
+    end
+
     return uniqueID
 end
 
