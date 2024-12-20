@@ -2,7 +2,7 @@
 
 **Vanguard** is a versatile and lightweight utility library for **Garry's Mod (GMod)**, designed to simplify and enhance server-side functionality. It provides a set of essential tools that can be used as a base for creating or enhancing other GMod projects. The library is modular, allowing developers to implement and extend it easily for their specific needs.
 
-The **Vanguard** library includes multiple submodules to cater to different aspects of Garry's Mod server management and game mechanics:
+The **Vanguard** library is used by the following modules officially created by the Vanguard team:
 
 - **Vanguard Weapons (VWEP)** – A comprehensive weapon base for managing and customizing weapons.
 - **Vanguard Anti Cheat (VAC)** – A private anti-cheat system to prevent cheating and exploits on your server.
