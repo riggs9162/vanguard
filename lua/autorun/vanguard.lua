@@ -21,6 +21,7 @@ include("vanguard/sh_util.lua")
 
 vanguard.util:Message("Vanguard " .. vanguard.info.version .. " is being initialized...")
 
+vanguard.util:IncludeDir("vanguard/derma")
 vanguard.util:IncludeDir("vanguard/core")
 vanguard.util:IncludeDir("vanguard/hooks")
 vanguard.modules:LoadFolder("vanguard/modules")
