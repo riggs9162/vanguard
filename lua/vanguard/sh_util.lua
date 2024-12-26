@@ -118,3 +118,26 @@ function vanguard.util:FindPlayer(identifier)
         end
     end
 end
+
+function vanguard.util:WrapText(text, font, maxWidth)
+    surface.SetFont(font)
+
+    local words = string.Explode(" ", text)
+    local lines = {}
+    local line = ""
+    for k, v in ipairs(words) do
+        local w = surface.GetTextSize(v)
+        local lw = surface.GetTextSize(line)
+
+        if ( lw + w > maxWidth ) then
+            table.insert(lines, line)
+            line = ""
+        end
+
+        line = line .. v .. " "
+    end
+
+    table.insert(lines, line)
+
+    return lines
+end
