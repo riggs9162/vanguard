@@ -141,3 +141,7 @@ function vanguard.util:WrapText(text, font, maxWidth)
 
     return lines
 end
+
+function vanguard.util:UpperCaseFirst(str)
+    return str:gsub("^%l", string.upper)
+end
