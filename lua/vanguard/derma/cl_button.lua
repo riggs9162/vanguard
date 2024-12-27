@@ -8,6 +8,7 @@ function PANEL:Init()
     self:SetExpensiveShadow(1, Color(0, 0, 0, 255))
     self:SetContentAlignment(5)
     self:SetCursor("hand")
+    self:SetTextInset(8, 0)
 
     self.colorLerp = Color(40, 40, 40, 255)
     self.colorTarget = Color(40, 40, 40, 255)
