@@ -1,5 +1,3 @@
-DEFINE_BASECLASS("DButton")
-
 local PANEL = {}
 
 function PANEL:Init()
