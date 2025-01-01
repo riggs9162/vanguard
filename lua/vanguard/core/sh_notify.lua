@@ -10,7 +10,7 @@ function vanguard.util:Notify(ply, message)
     if ( !IsValid(ply) or ply:IsBot() ) then return end
 
     if ( CLIENT ) then
-        chat.AddText(vanguard.info.color, "[Vanguard] ", Color(255, 255, 255), message)
+        chat.AddText(vanguard.info.color, "[Vanguard] ", color_white, message)
     else
         net.Start("Vanguard.Notify")
             net.WriteString(message)
