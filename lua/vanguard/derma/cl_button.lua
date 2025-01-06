@@ -39,14 +39,20 @@ function PANEL:OnCursorExited()
     self.colorTarget = Color(40, 40, 40, 255)
 end
 
-function PANEL:OnMousePressed()
+function PANEL:OnMousePressed(keyCode)
     self.colorFlash = Color(0, 0, 0, 255)
     self.colorFlashTime = CurTime() + 0.1
 
     surface.PlaySound("buttons/lightswitch2.wav")
 
-    if ( self.DoClick ) then
-        self:DoClick()
+    if ( keyCode == MOUSE_LEFT ) then
+        if ( self.DoClick ) then
+            self:DoClick()
+        end
+    elseif ( keyCode == MOUSE_RIGHT ) then
+        if ( self.DoRightClick ) then
+            self:DoRightClick()
+        end
     end
 end
 
