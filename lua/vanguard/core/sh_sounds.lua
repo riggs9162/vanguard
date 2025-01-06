@@ -4,19 +4,20 @@ local pairs = pairs
 vanguard.sounds = vanguard.sounds or {}
 vanguard.sounds.stored = vanguard.sounds.stored or {}
 
-function vanguard.sounds:Register(name, path, pitch, volume, level)
+function vanguard.sounds:Register(name, path, pitch, volume, level, channel)
     if ( !name or !path ) then return end
 
     local data = {
         path = path,
         pitch = pitch or 100,
         volume = volume or 1,
-        level = level or 75
+        level = level or 75,
+        channel = channel or CHAN_AUTO
     }
 
     sound.Add({
         name = name,
-        channel = CHAN_AUTO,
+        channel = data.channel or CHAN_AUTO,
         volume = data.volume,
         level = data.level,
         pitch = data.pitch,
