@@ -38,7 +38,7 @@ function vanguard.modules:Register(info)
     end
 
     -- Generate a unique ID for the module
-    local uniqueID = string.lower(string.gsub(info.Name, "%s", "_")) 
+    local uniqueID = string.lower(string.gsub(info.Name, "%s", "_"))
     info.uniqueID = uniqueID
 
     -- Store the module
@@ -71,9 +71,7 @@ function vanguard.modules:Get(identifier)
     end
 
     for k, v in pairs(self.stored) do
-        if ( vanguard.util:FindString(v.Name, identifier) ) then
-            return v
-        elseif ( vanguard.util:FindString(v.UniqueID, identifier) ) then
+        if ( vanguard.util:FindString(v.Name, identifier) or vanguard.util:FindString(v.UniqueID, identifier) ) then
             return v
         end
     end

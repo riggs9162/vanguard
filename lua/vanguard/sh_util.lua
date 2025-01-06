@@ -29,9 +29,9 @@ end
 
 function vanguard.util:Message(...)
     local args = { ... }
+    args[#args + 1] = "\n"
 
     MsgC(vanguard.info.color, "[VANGUARD] ", color_white, unpack(args))
-    Msg("\n")
 end
 
 function vanguard.util:Include(fileName, realm)
