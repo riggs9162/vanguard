@@ -1,3 +1,5 @@
+local surface = surface
+
 surface.CreateFont("Vanguard.Title", {
     font = "Arial",
     size = 48,

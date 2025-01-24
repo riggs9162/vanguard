@@ -1,3 +1,13 @@
+local ScrW = ScrW
+local ScrH = ScrH
+local vgui = vgui
+local Color = Color
+local ipairs = ipairs
+local draw = draw
+local string = string
+local concommand = concommand
+local IsValid = IsValid
+
 local alphabet = {
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
     "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"

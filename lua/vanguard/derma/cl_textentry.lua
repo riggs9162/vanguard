@@ -1,3 +1,13 @@
+local DEFINE_BASECLASS = DEFINE_BASECLASS
+local Color = Color
+local FrameTime = FrameTime
+local CurTime = CurTime
+local Lerp = Lerp
+local draw = draw
+local BaseClass = BaseClass
+local surface = surface
+local vgui = vgui
+
 DEFINE_BASECLASS("DTextEntry")
 
 local PANEL = {}

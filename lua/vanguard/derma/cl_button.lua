@@ -1,3 +1,11 @@
+local Color = Color
+local FrameTime = FrameTime
+local CurTime = CurTime
+local Lerp = Lerp
+local draw = draw
+local surface = surface
+local vgui = vgui
+
 local PANEL = {}
 
 function PANEL:Init()
