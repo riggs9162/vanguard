@@ -1,4 +1,3 @@
-local DEFINE_BASECLASS = DEFINE_BASECLASS
 local Color = Color
 local FrameTime = FrameTime
 local CurTime = CurTime
