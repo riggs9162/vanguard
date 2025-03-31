@@ -72,18 +72,23 @@ function vanguard.util:IncludeDir(directory)
 end
 
 function vanguard.util:FindString(str, find)
-    if ( !str or !find ) then return false end
+    if ( !str or !find ) then
+        print("Attempted to find a string with no value", str, find)
+        return false
+    end
 
-    return tobool(string.find(string.lower(str), string.lower(find)))
+    str = string.lower(str)
+    find = string.lower(find)
+
+    return string.find(str, find) != nil
 end
 
 function vanguard.util:FindText(txt, find)
     if ( !txt or !find ) then return end
 
     local words = string.Explode(" ", txt)
-    local find = self.FindString
     for k, v in ipairs(words) do
-        if ( find(v, find) ) then
+        if ( self:FindString(v, find) ) then
             return true
         end
     end
@@ -92,31 +97,33 @@ function vanguard.util:FindText(txt, find)
 end
 
 function vanguard.util:FindPlayer(identifier)
-    if ( !identifier ) then return end
+    if ( !identifier ) then return nil end
 
-    if ( type(identifier) == "Player" ) then
+    local identifierType = type(identifier)
+
+    if ( self:FindString(identifierType, "player" ) ) then
         return identifier
     end
 
-    if ( type(identifier) == "string" ) then
-        local find = self.FindString
-        for k, v in player.Iterator() do
-            if ( find(v:Name(), identifier) or find(v:SteamID(), identifier) or find(v:SteamID64(), identifier) ) then
+    if ( self:FindString(identifierType, "number") ) then
+        return Player(identifier)
+    end
+
+    if ( self:FindString(identifierType, "string") ) then
+        for k, v in ipairs(player.GetAll()) do
+            if ( self:FindString(v:Name(), identifier) or self:FindString(v:SteamID(), identifier) or self:FindString(v:SteamID64(), identifier) ) then
                 return v
             end
         end
     end
 
-    if ( type(identifier) == "number" ) then
-        return Player(identifier)
-    end
-
-    if ( type(identifier) == "table" ) then
-        local find = self.FindPlayer
+    if ( self:FindString(identifierType, "table") ) then
         for k, v in ipairs(identifier) do
-            return find(v)
+            return self:FindString(v)
         end
     end
+
+    return nil
 end
 
 function vanguard.util:WrapText(text, font, maxWidth)
