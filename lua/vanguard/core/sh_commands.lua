@@ -3,8 +3,8 @@ local IsValid = IsValid
 local http = http
 local Color = Color
 
-concommand.Add("vanguard_reload", function(ply, cmd, args)
-    if ( !IsValid(ply) or ply:IsSuperAdmin() ) then
+concommand.Add("vanguard_reload", function(client, cmd, args)
+    if ( !IsValid(client) or client:IsSuperAdmin() ) then
         vanguard.util:Message("Reloading Vanguard...")
 
         vanguard.util:IncludeDir("vanguard/core")

@@ -13,7 +13,7 @@ vanguard = vanguard or {}
 
 vanguard.info = vanguard.info or {}
 vanguard.info.version = "0.0.1"
-vanguard.info.versionLink = "https://raw.githubusercontent.com/Minerva-Servers/vanguard/refs/heads/main/VERSION.txt"
+vanguard.info.versionLink = "https://raw.githubusercontent.com/riggs9162/vanguard/refs/heads/main/VERSION.txt"
 vanguard.info.color = Color(255, 100, 0)
 
 AddCSLuaFile("vanguard/sh_util.lua")

@@ -6,15 +6,15 @@ local ipairs = ipairs
 local util = util
 local LocalPlayer = LocalPlayer
 
-function vanguard.util:Notify(ply, message)
-    if ( !IsValid(ply) or ply:IsBot() ) then return end
+function vanguard.util:Notify(client, message)
+    if ( !IsValid(client) or client:IsBot() ) then return end
 
     if ( CLIENT ) then
         chat.AddText(vanguard.info.color, "[Vanguard] ", color_white, message)
     else
         net.Start("Vanguard.Notify")
             net.WriteString(message)
-        net.Send(ply)
+        net.Send(client)
     end
 end
 
