@@ -46,10 +46,13 @@ function vanguard.modules:Register(info)
 
     -- Let's see if our module is up to date
     if ( SERVER and info.VersionLink and info.VersionLink != "" ) then
-        http.Fetch(info.VersionLink, function(body, len, headers, code)
-            if ( body != info.Version ) then
-                vanguard.util:Message(Color(255, 0, 0), "Your " .. info.Name .. " module is out of date! Please update it.")
-            end
+        -- Call in next tick because ISteamHTTP may not be available at the moment
+        timer.Simple(0, function()
+            http.Fetch(info.VersionLink, function(body, len, headers, code)
+                if ( body != info.Version ) then
+                    vanguard.util:Message(Color(255, 0, 0), "Your " .. info.Name .. " module is out of date! Please update it.")
+                end
+            end)
         end)
     end
 
