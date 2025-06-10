@@ -28,12 +28,15 @@ vanguard.modules:LoadFolder("vanguard/modules")
 
 hook.Add("Initialize", "Vanguard.Initialize", function()
     if ( SERVER and vanguard.info.versionLink != "" ) then
-        http.Fetch(vanguard.info.versionLink, function(body, len, headers, code)
-            if ( body != vanguard.info.version ) then
-                vanguard.util:Message(Color(255, 0, 0), "Your Vanguard library is out of date! Please update it.")
-            end
+        -- Call in next tick because ISteamHTTP is not available at the moment
+        timer.Simple(0, function()
+            http.Fetch(vanguard.info.versionLink, function(body, len, headers, code)
+                if ( body != vanguard.info.version ) then
+                    vanguard.util:Message(Color(255, 0, 0), "Your Vanguard library is out of date! Please update it.")
+                end
 
-            vanguard.util:Message(Color(0, 255, 0), "Vanguard " .. vanguard.info.version .. " has been successfully initialized.")
+                vanguard.util:Message(Color(0, 255, 0), "Vanguard " .. vanguard.info.version .. " has been successfully initialized.")
+            end)
         end)
     else
         vanguard.util:Message(Color(0, 255, 0), "Vanguard " .. vanguard.info.version .. " has been successfully initialized.")
